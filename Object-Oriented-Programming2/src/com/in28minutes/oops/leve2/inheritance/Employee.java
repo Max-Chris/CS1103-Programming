@@ -7,6 +7,10 @@ public class Employee extends Person{
 	private String employeeName;
 	private char employeeGrade;
 	private BigDecimal salary;
+	
+	public Employee() {
+		System.out.println("Employee Constructor");
+	}
 	public String getTitle() {
 		return title;
 	}
