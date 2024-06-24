@@ -17,7 +17,7 @@ public class StudentRunner {
 		System.out.println(person);*/
 		
 		Employee employee = new Employee();
-		employee.setName("Ojo");
+		//employee.setName("Ojo");
 		employee.setEmail("ojo@gmail.com");
 		employee.setPhoneNumber("09069136878");
 		employee.setEmployeeGrade('A');

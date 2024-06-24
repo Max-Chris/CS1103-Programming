@@ -3,6 +3,7 @@ package com.in28minutes.oops.leve2.inheritance;
 public class Student extends Person{
 	private String collegeName;
 	private int year;
+	
 	public String getCollegeName() {
 		return collegeName;
 	}
