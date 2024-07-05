@@ -15,8 +15,16 @@ public class Order {
 	public Order(int orderID) {
 		this.orderID = orderID;
 	}
+	
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
 	public int theTotalItems(Customer total) {
 		orderTotal = total.itemsTotal();//iT.iitemsTotal();
+		System.out.println("This is what is contained here: " +orderTotal );
 		return orderTotal;
 	}
 	
@@ -30,8 +38,9 @@ public class Order {
 	public String toString() {
 		//System.out.println(customerName + " " + " bought a total of: " + orderTotal);
 		
-		return customerName + " " + " bought a total of: " + orderTotal + " "+ "items";
+		return customerName + " " + " bought a total of: " + orderTotal + " "+ getProductName()+"\n"+" " ;
 	}
+	
 }
 
 	
