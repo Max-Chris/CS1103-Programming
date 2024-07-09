@@ -2,6 +2,7 @@ package DisplayTime;
 
 import java.util.Calendar;
 
+
 public class Display implements Runnable{
 	
 	public int hourTime() {
@@ -15,6 +16,12 @@ public class Display implements Runnable{
 			return seconds;
 
 			}
+	}
+
+	@Override
+	public void run() {
+		hourTime();
+		
 	}
 	
 }
