@@ -1,25 +1,27 @@
 package com.ofoegbu.timeOfTheDay;
 import DisplayTime.Display;
 
-public class Hour implements Runnable{
+public class Hour extends Display implements Runnable{
+	
 	private int timeInHour;
 	private int count;
-	private int Seconds;
+	private int seconds;
 	private Display dsp;
 	
 	
 	@Override
 	public void run() {
-		Seconds = showMyTime(dsp);
+		seconds = showMyTime(dsp);
+		System.out.println("Time in seconds is: "+seconds );
 		//long startTime = System.currentTimeMillis();
 	    //while(count < Seconds) {
 	    	//count++;
 	    }
 	    //long elapsedTime = System.currentTimeMillis() - startTime;
 	    //System.out.println("The elapsed time is: " +elapsedTime);
-	public int showMyTime(Display dsp) {
+	public int showMyTime(Display dsp1) {
+		int my =dsp1.hourTime();
 		
-		int viewTime = dsp.hourTime();
-		return viewTime;
-	}
+		return 		my;
+}
 	}
