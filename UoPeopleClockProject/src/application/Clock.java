@@ -100,21 +100,27 @@ public class Clock extends Application implements Runnable{
 									String conVertSeconds;
 									String convertMinutes;
 									String convertHour;
-									String fullTime;
-									while (true) {
+									while (terminate) {
 
 										Calendar now= Calendar.getInstance();
 										int hour = now.get(Calendar.HOUR_OF_DAY);
 										final int minutes=now.get(Calendar.MINUTE);
 										final int seconds = now.get(Calendar.SECOND);
 										setTimeInHour(seconds);
+										final String fullTime = "" +hour + " : "+ minutes +" : "+ seconds;
+
 										
 										Platform.runLater( () ->
-													text.setText("" +hour + " : "+ minutes +" : "+ seconds));
+													text.setText(fullTime + "\n" ));
+										try {
+											Thread.sleep(20);
+										} catch (InterruptedException e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										}
 										conVertSeconds = "s = " + seconds;
 										convertMinutes = "m = " + minutes;
 										convertHour = "h = " + hour;
-										fullTime = "time =" + hour +":"+ minutes +":"+ seconds;
 										}
 
 				//Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "Thread-6"
